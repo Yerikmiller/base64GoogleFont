@@ -32,7 +32,7 @@ class base64GoogleFont
 	}
 	verifyURL(url){
     	return url.indexOf('https://fonts.googleapis.com/') === 0;
-  	}
+  	} 
   	embedFonts(cssText){
 	  	var fontLocations = cssText.match(/https:\/\/[^)]+/g)
 	    var fontLoadedPromises = fontLocations.map(function (location) {
