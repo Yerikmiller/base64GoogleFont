@@ -10,11 +10,16 @@ class base64GoogleFont
 			outputResult('')
 			return;
 		}
+		this.errorHandler = function(e){
+			application.results = "impossible-to-load";
+			console.info('Error loading font: ', e);
+			application.ready(false);
+		}
 		this.outputResult = function(cssText){
 			application.results = cssText;
 			application.ready(application.results);
 		}
-		return fetchcss(url)
+		return this.fetchcss(url)
 	      .then(this.embedFonts)
 	      .then(this.outputResult)
 	      .catch(this.errorHandler);
@@ -48,8 +53,5 @@ class base64GoogleFont
 	    return Promise.all(fontLoadedPromises).then(function () {
 	      return cssText
 	    })
-  	}
-	errorHandler(e){
-		console.info('ERR', e);
-	}	
+  	}		
 }
