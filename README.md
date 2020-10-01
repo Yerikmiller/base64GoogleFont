@@ -21,7 +21,8 @@ new base64GoogleFont("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@
   font-family: 'Nanum Brush Script';
   font-style: normal;
   font-weight: 400;
-  src: local('Nanum Brush Script'), local('NanumBrush'), url(data:font/woff2;base64,${base64Data}...)
+  src: local('Nanum Brush Script'), local('NanumBrush'), url(data:font/woff2;base64,${base64Data}...);
+}
 ```
 
 NOTE: ready state will return the base64 css text
