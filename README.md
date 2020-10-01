@@ -1,5 +1,9 @@
 # EMBED BASE64 GOOGLE FONT
 ## USAGE
+``` 
+@link the js file and start using it
+<script src="https://cdn.jsdelivr.net/gh/Yerikmiller/base64GoogleFont@master/core.js"></script>
+```
 Instance the class base64GoogleFont and pass two parameters -> (url, readystate)
 #### new base64GoogleFont(url, readystate)
 ### URL PARAMETER
@@ -24,5 +28,8 @@ new base64GoogleFont("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@
   src: local('Nanum Brush Script'), local('NanumBrush'), url(data:font/woff2;base64,${base64Data}...);
 }
 ```
-
 NOTE: ready state will return the base64 css text
+
+
+Inpired in: https://amio.github.io/embedded-google-fonts/
+License MIT
